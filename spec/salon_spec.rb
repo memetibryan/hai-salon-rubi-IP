@@ -89,6 +89,6 @@ require('rspec')
         client2 = Client.new({:description => "Review Ruby", :salon_id => salon.id()})
         client2.save()
         salon.delete()
-        expect(Client.all()).to(eq([]))
+        expect(Client.all()).==([])
       end
     end
