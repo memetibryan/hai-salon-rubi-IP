@@ -1,7 +1,7 @@
 development:
     adapter: postgresql
-    database: to_do_development
+    database: salon_development
 
 test:
     adapter: postgresql
-    database: to_do_test
+    database: salon_test
