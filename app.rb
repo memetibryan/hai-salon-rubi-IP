@@ -41,6 +41,7 @@ require('sinatra')
     erb(:description_form)
   end
 
+  #loads the specific record details when clicked
   get("/salons/:id") do
     @salon = Salon.find(params.fetch("id").to_i())
     erb(:salon)
