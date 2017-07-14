@@ -21,4 +21,18 @@ class Salon
       result = DB.exec("INSERT INTO salons (name) VALUES ('#{@name}') RETURNING id;")
       @id = result.first().fetch("id").to_i()
     end
+
+    define_method(:==) do |another_salon|
+      self.name().==(another_salon.name()).&(self.id().==(another_salon.id()))
+    end
+
+    define_singleton_method(:find) do |id|
+      found_salon = nil
+      Salon.all().each() do |salon|
+        if salon.id().==(id)
+          found_salon = salon
+        end
+      end
+      found_salon
+    end
 end
