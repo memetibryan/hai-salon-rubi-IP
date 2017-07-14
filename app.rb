@@ -8,8 +8,6 @@ require('sinatra')
   also_reload('lib/**/*.rb')
   require("pg")
 
-  DB = PG.connect({:dbname => "salon"})
-
   get("/") do
     erb(:index)
   end
