@@ -8,14 +8,17 @@ require('sinatra')
   require('./lib/salon')
   require('./lib/client')
 
+  #loads first web page 'index'
   get("/") do
     erb(:index)
   end
 
+  #loads the form to create a new record to database 'salonist'
   get("/salons/new") do
     erb(:salon_form)
   end
 
+  #addes the user input from the form to database
   post("/salons") do
     name = params.fetch("name")
     salon = Salon.new({:name => name, :id => nil})
@@ -26,11 +29,13 @@ require('sinatra')
     end
   end
 
+  #displays all the stylists from the database to the webpage
   get('/salons') do
     @salons = Salon.all()
     erb(:salons)
   end
 
+  #loads the form to add a new record to database 'stylist'
   get('/add') do
     @salons = Salon.all()
     erb(:description_form)
