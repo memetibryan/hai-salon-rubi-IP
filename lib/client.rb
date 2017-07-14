@@ -20,4 +20,8 @@ class Client
     define_method(:save) do
       DB.exec("INSERT INTO clients (description, salon_id) VALUES ('#{@description}', #{@salon_id});")
     end
+
+    def delete
+      DB.exec("DELETE FROM clients WHERE salon_id = salon_id");
+    end
 end
