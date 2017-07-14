@@ -9,9 +9,9 @@ The following user stories should be completed:
     3.As a salon owner, I want to add clients to a stylist.
 
 ## Technology Used
-1.**ruby 2.2.3p173 (2015-08-18 revision 51636) [i686-linux]**
-2.**Heroku for Hosting**
-3.**psql (9.5.7)**
+    1. **ruby 2.2.3p173 (2015-08-18 revision 51636) [i686-linux]**
+    2. **Heroku for Hosting**
+    3. **psql (9.5.7)**
 
 
 ## Setup (Developers)
