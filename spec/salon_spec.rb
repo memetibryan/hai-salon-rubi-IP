@@ -91,4 +91,11 @@ require('rspec')
         salon.delete()
         expect(Client.all()).==([])
       end
+
+      describe(Salon) do
+        it("validates presence of name") do
+        salon = Salon.new({:name => ""})
+        expect(salon.save()).to(eq(false))
     end
+  end
+end

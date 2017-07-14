@@ -19,8 +19,11 @@ require('sinatra')
   post("/salons") do
     name = params.fetch("name")
     salon = Salon.new({:name => name, :id => nil})
-    salon.save()
-    erb(:salon_success)
+    if salon.save()
+      erb(:salon_success)
+    else
+      erb(:errors) #catching errors
+    end
   end
 
   get('/salons') do
