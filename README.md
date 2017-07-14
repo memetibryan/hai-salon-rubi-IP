@@ -22,7 +22,7 @@ To try out the website,the users should make sure that he/she has the following:
 
     1.Google chrome or any other search engine like mozilla firefox.
     2.He/she has access to the internet.
-    3.After the setup and installation procedure, the user can now visit the website through the link:-(https://hair-salon-memetibryan.herokuapp.com)
+    3.After the setup and installation procedure, the user can now visit the website through the link:-[https://hair-salon-memetibryan.herokuapp.com]
 
 ### AUTHORS
 
