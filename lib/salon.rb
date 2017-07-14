@@ -16,4 +16,9 @@ class Salon
       end
       salons
     end
+
+    define_method(:save) do
+      result = DB.exec("INSERT INTO salons (name) VALUES ('#{@name}') RETURNING id;")
+      @id = result.first().fetch("id").to_i()
+    end
 end
