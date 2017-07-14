@@ -18,6 +18,18 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+background: url((https://thumbs.dreamstime.com/z/hair-salon-sign-scissors-design-elements-27031063.jpg) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: cursive;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
 h1{
 	font-family: 'Raleway', sans-serif;
 	color: black;
