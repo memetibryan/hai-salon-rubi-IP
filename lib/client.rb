@@ -16,4 +16,8 @@ class Client
       end
       clients
     end
+
+    define_method(:save) do
+      DB.exec("INSERT INTO clients (description, salon_id) VALUES ('#{@description}', #{@salon_id});")
+    end
 end
