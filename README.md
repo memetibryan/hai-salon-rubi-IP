@@ -5,8 +5,8 @@ Create an application for a hair salon. The stylists at the salon work independe
 The following user stories should be completed:
 
     1.As a salon owner, I want to view, add, update and delete stylists.
-    2.3.As a salon owner, I want to view, add, update and delete clients.
-    As a salon owner, I want to add clients to a stylist.
+    2.As a salon owner, I want to view, add, update and delete clients.
+    3.As a salon owner, I want to add clients to a stylist.
 
 ## Technology Used
 1. **ruby 2.2.3p173 (2015-08-18 revision 51636) [i686-linux]**
@@ -22,7 +22,7 @@ To try out the website,the users should make sure that he/she has the following:
 
     1.Google chrome or any other search engine like mozilla firefox.
     2.He/she has access to the internet.
-    3.After the setup and installation procedure, the user can now visit the website through:-[https://hair-salon-memetibryan.herokuapp.com/]
+    3.After the setup and installation procedure, the user can now visit the website through the link:-<a href="https://hair-salon-memetibryan.herokuapp.com/"</a>
 
 ### AUTHORS
 
