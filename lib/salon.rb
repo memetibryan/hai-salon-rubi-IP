@@ -35,4 +35,15 @@ class Salon
       end
       found_salon
     end
+
+    define_method(:clients) do
+      salon_clients = []
+      clients = DB.exec("SELECT * FROM clients WHERE salon_id = #{self.id()};")
+      clients.each() do |client|
+        description = client.fetch("description")
+        salon_id = client.fetch("salon_id").to_i()
+        salon_clients.push(Client.new({:description => description, :salon_id => salon_id}))
+      end
+      salon_clients
+    end
 end
