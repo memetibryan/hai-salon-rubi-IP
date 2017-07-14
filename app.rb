@@ -1,12 +1,12 @@
 require('sinatra')
   require('sinatra/reloader')
+  also_reload('lib/**/*.rb')
+  require("pg")
   #database
   require("sinatra/activerecord")
   #database and alsways require before the classes using it
   require('./lib/salon')
   require('./lib/client')
-  also_reload('lib/**/*.rb')
-  require("pg")
 
   get("/") do
     erb(:index)

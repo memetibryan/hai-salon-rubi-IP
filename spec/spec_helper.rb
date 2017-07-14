@@ -7,7 +7,11 @@ require("rspec")
 
   RSpec.configure do |config|
     config.after(:each) do
-      DB.exec("DELETE FROM salons *;")
-      DB.exec("DELETE FROM clients *;")
+      Salon.all().each() do |salon|
+        salon.destroy()
+      end
+      Client.all().each() do |client|
+        client.destroy()
+      end
     end
   end
