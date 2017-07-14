@@ -6,7 +6,7 @@
   <% if @salons.any?() %>
     <ul>
       <% @salons.each() do |salon| %>
-        <li><a href="/salons/<%= salon.id()%>"><%= salon.name() %></a> </li>
+        <li><a href="/salons/<%= salon.id()%>"><%= salon.name() %></a><p>Became a member on:</p><%= salon.created_at() %> </li>
         <p><a href="/salons/<%= salon.id() %>/edit"><button class="button btn"> Edit <%= salon.name() %> salon</button></a></p>
       <% end %>
     </ul>

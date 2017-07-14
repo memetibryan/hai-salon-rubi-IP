@@ -2,7 +2,7 @@
   <% if @salon.clients().any?() %>
     <h3>Here are all the clients in this salon with their due dates:</h3>  <ol>
       <% @salon.clients().each() do |client| %>
-        <li><%= client.description() %></li>
+        <li><%= client.description() %> <p>Joined On:</p><%= client.created_at() %></li>
       <% end %>
     </ol>
   <% else %>
