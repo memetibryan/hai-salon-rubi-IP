@@ -1,9 +1,13 @@
 ENV['RACK_ENV'] = 'test'  #database connecting
 
-require("rspec")
-  require("pg")
-  require("salon")
-  require('client')
+require("bundler/setup")
+  Bundler.require(:default, :test)
+  set(:root, Dir.pwd())
+
+require('capybara/rspec')
+  Capybara.app = Sinatra::Application
+  set(:show_exceptions, false)
+  require('./app')
 
   RSpec.configure do |config|
     config.after(:each) do
