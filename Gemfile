@@ -1,6 +1,7 @@
 source("https://rubygems.org")
 
   gem("sinatra-contrib", :require => "sinatra/reloader")
+  gem("descriptive_statistics")
 
   #database gems
   gem("sinatra-activerecord")
