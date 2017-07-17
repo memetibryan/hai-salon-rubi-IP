@@ -1,12 +1,6 @@
-require('sinatra')
-  require('sinatra/reloader')
-  also_reload('lib/**/*.rb')
-  require("pg")
-  #database
-  require("sinatra/activerecord")
-  #database and alsways require before the classes using it
-  require('./lib/salon')
-  require('./lib/client')
+require("bundler/setup")
+  Bundler.require(:default)
+  also_reload("lib/**/*.rb")
 
   #loads first web page 'index'
   get("/") do
