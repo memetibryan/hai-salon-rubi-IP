@@ -1,0 +1,32 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby:
+        mass_threshold: 18
+      - javascript:
+      - php:
+      - python:
+
+engines:
+  csslint:
+    enabled: true
+
+  ratings:
+    paths:
+      - "**.css"
+
+eslint:
+  enabled: true
+  config:
+    extensions:
+    - .es6
+    - .js
+    - .jsx
+
+ratings:
+   paths:
+   - "**.es6"
+   - "**.js"
+   - "**.jsx"
