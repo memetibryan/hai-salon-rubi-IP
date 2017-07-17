@@ -67,7 +67,7 @@ require('rspec')
         salon = Salon.new({:name => "Moringa School stuff", :id => nil})
         salon.save()
         salon.update({:name => "Homework stuff"})
-        expect(salon.name()).to(eq("Homework stuff"))
+        expect(salon.name()).==("Homework stuff")
       end
     end
 
@@ -91,18 +91,25 @@ require('rspec')
         salon.delete()
         expect(Client.all()).==([])
       end
+    end
 
-      describe(Salon) do
-        it("validates presence of name") do
-        salon = Salon.new({:name => ""})
-        expect(salon.save()).to(eq(false))
+    describe(Salon) do
+      it("validates presence of name") do
+      salon = Salon.new({:name => ""})
+      expect(salon.save()).to(eq(false))
       end
     end
 
     describe(Salon) do
     it("ensures the length of description is at most 50 characters") do
-      task = Salon.new({:name => "a".*(20)})
-      expect(task.save()).to(eq(false))
+      salon = Salon.new({:name => "a".*(20)})
+      expect(salon.save()).to(eq(false))
+      end
+    end
+
+    describe(Salon) do
+    it("converts the name to lowercase") do
+      salon = Salon.create({:name => "FINAGLE THE BUFFALO"})
+      expect(salon.name()).to(eq("Finagle The Buffalo"))
     end
   end
-end

@@ -6,4 +6,13 @@ class Salon < ActiveRecord::Base
 
 	#validates the number of characters input by the user
 	validates(:name, {:presence => true, :length => { :maximum => 19 }})
+
+	#changes the input to Title_Case
+	before_save(:titlecase_name)
+
+private
+
+    define_method(:titlecase_name) do
+      self.name = (name().titlecase())
+    end
 end
