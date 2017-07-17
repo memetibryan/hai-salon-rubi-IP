@@ -96,6 +96,13 @@ require('rspec')
         it("validates presence of name") do
         salon = Salon.new({:name => ""})
         expect(salon.save()).to(eq(false))
+      end
+    end
+
+    describe(Salon) do
+    it("ensures the length of description is at most 50 characters") do
+      task = Salon.new({:name => "a".*(20)})
+      expect(task.save()).to(eq(false))
     end
   end
 end
