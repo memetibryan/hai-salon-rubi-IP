@@ -1,9 +1,6 @@
-require('capybara/rspec')
-  require('./app')
-  Capybara.app = Sinatra::Application
-  set(:show_exceptions, false)
+require('spec_helper')
 
-  describe('adding a new salon', {:type => :feature}) do
+describe('adding a new salon', {:type => :feature}) do
     it('allows a user to click a salon to see the clients and details for it') do
       visit('/salons/new')
       # click_button('Add New Salon')
