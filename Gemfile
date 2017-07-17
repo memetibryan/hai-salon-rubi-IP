@@ -7,7 +7,6 @@ source("https://rubygems.org")
   gem("rake")
   gem("pg")
   #database gems
-
   gem("sinatra")
 
   group(:test) do

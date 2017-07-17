@@ -1,17 +1,13 @@
-ENV['RACK_ENV'] = 'test'  #database connecting
+ENV['RACK_ENV'] = 'test'
 
-require("bundler/setup")
-Bundler.require(:default, :test)
-set(:root, Dir.pwd())
+  require("bundler/setup")
+  Bundler.require(:default, :test)
+  set(:root, Dir.pwd())
 
-require('capybara/rspec')
-Capybara.app = Sinatra::Application
-set(:show_exceptions, false)
-require('./app')
-
-#loading individual needed files when needed.
-Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require file }
-
+  require('capybara/rspec')
+  Capybara.app = Sinatra::Application
+  set(:show_exceptions, false)
+  require('./app')
 
   RSpec.configure do |config|
     config.after(:each) do
