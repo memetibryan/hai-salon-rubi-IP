@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis|Jaldi|Ubuntu|Baloo+Bhaina|Courgette|Great+Vibes|Montserrat|Patua+One|Raleway');
 
+
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Patua One', cursive;
@@ -11,47 +12,48 @@ font-family: 'Jaldi', sans-serif;
 font-family: 'Ubuntu', sans-serif;*/
 
 body {
-  overflow-x: hidden;
-  background-image: url(https://thumbs.dreamstime.com/z/hair-salon-sign-scissors-design-elements-27031063.jpg);
-  color: black;
-  font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    background-image: url(https://thumbs.dreamstime.com/z/hair-salon-sign-scissors-design-elements-27031063.jpg);
+    color: black;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
 }
 
 background: url((https://thumbs.dreamstime.com/z/hair-salon-sign-scissors-design-elements-27031063.jpg);
-  no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-	font-family: cursive;
-  padding: 0;
-  margin: 0;
-  width: auto;
-  height: auto;
+no-repeat fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+font-family: cursive;
+padding: 0;
+margin: 0;
+width: auto;
+height: auto;
+
 }
 
-h1{
-	font-family: 'Raleway', sans-serif;
-	color: black;
-	font-size: 65px;
+h1 {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 65px;
 }
 
-h2{
-	font-size: 50px;
-	font-family: 'Raleway', sans-serif;
+h2 {
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
 }
 
-.button{
-	color: red;
-	padding: 15px;
+.button {
+    color: red;
+    padding: 15px;
 }
 
 a {
-	color: black;
-	font-size: 30px;
+    color: black;
+    font-size: 30px;
 }
 
 p {
-	color: black;
+    color: black;
 }

@@ -1,24 +1,32 @@
 <h1>Salonists</h1>
-
 <hr>
-<div class = salons>
-
-  <% if @salons.any?() %>
-    <ul>
-      <% @salons.each() do |salon| %>
-        <li><a href="/salons/<%= salon.id()%>"><%= salon.name() %></a><p>Became a member on:</p><%= salon.created_at() %> </li>
-        <p><a href="/salons/<%= salon.id() %>/edit"><button class="button btn"> Edit <%= salon.name() %> salon</button></a></p>
-      <% end %>
-    </ul>
-
-  <% else %>
-
-      <p>There are no salons yet!</p>
-
-  <% end %>
+<div class=s alons>
+    <% if @salons.any?() %>
+        <ul>
+            <% @salons.each() do |salon| %>
+                <li>
+                    <a href="/salons/<%= salon.id()%>">
+                        <%= salon.name() %>
+                    </a>
+                    <p>Became a member on:</p>
+                    <%= salon.created_at() %>
+                </li>
+                <p>
+                    <a href="/salons/<%= salon.id() %>/edit">
+                        <button class="button btn"> Edit
+                            <%= salon.name() %> salon</button>
+                    </a>
+                </p>
+                <% end %>
+        </ul>
+        <% else %>
+            <p>There are no salons yet!</p>
+            <% end %>
 </div>
-
-  <hr>
-
-  <a href="/salons/new"><button class="button btn">Add New Salonist without task</button></a>
-  <a href="/add"><button class="button btn">Add a task to existing salon</button></a>
+<hr>
+<a href="/salons/new">
+    <button class="button btn">Add New Salonist without task</button>
+</a>
+<a href="/add">
+    <button class="button btn">Add a task to existing salon</button>
+</a>
